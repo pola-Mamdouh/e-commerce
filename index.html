@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <!-- Main Css file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <div class="main-header">
+        <div class="container">
+          <div class="content flex-between">
+            <a href="#" class="logo">Anon</a>
+            <div class="search">
+              <input type="search" placeholder="Enter your product name..." />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="icons">
+              <i class="fa-regular fa-user"></i>
+              <div class="heart">
+                <i class="fa-regular fa-heart"></i>
+                <span class="counter flex-center">0</span>
+              </div>
+              <div class="shopping">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="counter flex-center">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Men's</a></li>
+          <li><a href="#">Women's</a></li>
+          <li><a href="#">Jewelry</a></li>
+          <li><a href="#">Perfume</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Hot Offers</a></li>
+        </ul>
+      </div>
+      <ul class="media">
+        <li>
+          <a href="#"><i class="fa-solid fa-bars"></i></a>
+        </li>
+        <li>
+          <a class="shopping" href="#">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="counter flex-center">0</span>
+          </a>
+        </li>
+        <li>
+          <a href="#header"><i class="fa-solid fa-house"></i></a>
+        </li>
+        <li>
+          <a class="heart" href="#"
+            ><i class="fa-regular fa-heart"></i>
+            <span class="counter flex-center">0</span></a
+          >
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-th-large"></i> </a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <section class="home" id="home">
+        <div class="slider">
+          <div class="container">
+            <button class="left" onclick="prevImg()" id="prav">
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button class="right" onclick="nextImg()" id="next">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+            <ul class="slider-changer" id="slider-changer"></ul>
+            <div class="content">
+              <div class="slider-info">
+                <p class="offer">Trending item</p>
+                <h1>Women's latest fashion sale</h1>
+                <p class="price">starting at $ <span>20</span>.00</p>
+                <button class="btn btn-primary">Shop now</button>
+              </div>
+              <div class="slider-bg">
+                <img id="imgSlider" src="images/banner-1.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="items">
+        <div class="container">
+          <div class="content">
+            <div class="custom-card">
+              <div class="img">
+                <img src="images/dress.svg" alt="dress" />
+              </div>
+              <div class="info">
+                <div class="info-head">
+                  <h3>Dress & frock</h3>
+                  <p>(53)</p>
+                </div>
+                <a href="#" class="show-more">Show more</a>
+              </div>
+            </div>
+            <div class="custom-card">
+              <div class="img">
+                <img src="images/coat.svg" alt="coat" />
+              </div>
+              <div class="info">
+                <div class="info-head">
+                  <h3>Winter wear</h3>
+                  <p>(53)</p>
+                </div>
+                <a href="#" class="show-more">Show more</a>
+              </div>
+            </div>
+            <div class="custom-card">
+              <div class="img">
+                <img src="images/glasses.svg" alt="glasses" />
+              </div>
+              <div class="info">
+                <div class="info-head">
+                  <h3>Glasses & lens</h3>
+                  <p>(53)</p>
+                </div>
+                <a href="#" class="show-more">Show more</a>
+              </div>
+            </div>
+            <div class="custom-card">
+              <div class="img">
+                <img src="images/jacket.svg" alt="dress" />
+              </div>
+              <div class="info">
+                <div class="info-head">
+                  <h3>Dress & frock</h3>
+                  <p>(53)</p>
+                </div>
+                <a href="#" class="show-more">Show more</a>
+              </div>
+            </div>
+            <div class="custom-card">
+              <div class="img">
+                <img src="images/watch.svg" alt="dress" />
+              </div>
+              <div class="info">
+                <div class="info-head">
+                  <h3>Dress & frock</h3>
+                  <p>(53)</p>
+                </div>
+                <a href="#" class="show-more">Show more</a>
+              </div>
+            </div>
+            <div class="custom-card">
+              <div class="img flex-center">
+                <img src="images/hat.svg" alt="dress" />
+              </div>
+              <div class="info">
+                <div class="info-head">
+                  <h3>Dress & frock</h3>
+                  <p>(53)</p>
+                </div>
+                <a href="#" class="show-more">Show more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products-categories">
+        <div class="container">
+          <div class="content">
+            <div class="side-categories">
+              <div class="categories">
+                <h3>Categories</h3>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fas fa-tshirt"></i> Clothes</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fas fa-shoe-prints"></i> Footwear</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fas fa-gem"></i> Jewelry</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fas fa-spray-can"></i> Perfume</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fas fa-magic"></i> Cosmetics</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fas fa-glasses"></i> Glasses</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fas fa-shopping-bag"></i> Bags</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="best-sellers">
+                <h3>Best Sellers</h3>
+                <div class="best-sellers-card">
+                  <div class="img">
+                    <img src="images/1-best-sellers.jpg" alt="Baby Fabric Shoes">
+                  </div>
+                  <div class="info">
+                    <h4>Baby Fabric Shoes</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="original-price">$5.00</span>
+                      <span class="discount-price">$4.00</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="best-sellers-card">
+                  <div class="img">
+                    <img src="images/2-best-sellers.jpg" alt="Men's Hoodies T-Shirt">
+                  </div>
+                  <div class="info">
+                    <h4>Men's Hoodies T-Shirt</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">
+                      <span class="original-price">$17.00</span>
+                      <span class="discount-price">$7.00</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="best-sellers-card">
+                  <div class="img">
+                    <img src="images/3-best-sellers.jpg" alt="Girls T-Shirt">
+                  </div>
+                  <div class="info">
+                    <h4>Girls T-Shirt</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">
+                      <span class="original-price">$5.00</span>
+                      <span class="discount-price">$3.00</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="best-sellers-card">
+                  <div class="img">
+                    <img src="images/4-best-sellers.jpg" alt="Woolen Hat">
+                  </div>
+                  <div class="info">
+                    <h4>Woolen Hat</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="original-price">$15.00</span>
+                      <span class="discount-price">$12.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-cards">
+              <div class="tabs">
+                <button class="tab-btn active" data-tab="new-arrivals">
+                  New Arrivals
+                </button>
+                <button class="tab-btn" data-tab="trending">Trending</button>
+                <button class="tab-btn" data-tab="top-rated">Top Rated</button>
+              </div>
+
+              <div class="tab-content">
+                <div class="new-arrivals active">
+                  <h3>New Arrivals</h3>
+                  <!-- Product 1 -->
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="images/jacket-1.jpg"
+                        alt="Men Yarn Fleece Full-Zip Jacket"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h4>Men Yarn Fleece Full-Zip Jacket</h4>
+                      <p class="category">Winter wear</p>
+                      <div class="price">
+                        <span class="original-price">$61.00</span>
+                        <span class="discount-price">$11.00</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Product 2 -->
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="images/jacket-5.jpg"
+                        alt="Mens Winter Leathers Jackets"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h4>Mens Winter Leathers Jackets</h4>
+                      <p class="category">Winter wear</p>
+                      <div class="price">
+                        <span class="original-price">$32.00</span>
+                        <span class="discount-price">$20.00</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Product 3 -->
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="images/jacket-3.jpg"
+                        alt="Mens Winter Leathers Jackets"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h4>Mens Winter Leathers Jackets</h4>
+                      <p class="category">Jackets</p>
+                      <div class="price">
+                        <span class="original-price">$50.00</span>
+                        <span class="discount-price">$25.00</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Product 4 -->
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="images/shorts-1.jpg"
+                        alt="Better Basics French Terry Sweatshorts"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h4>Better Basics French Terry Sweatshorts</h4>
+                      <p class="category">Shorts</p>
+                      <div class="price">
+                        <span class="original-price">$20.00</span>
+                        <span class="discount-price">$10.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="trending">
+                  <h3>Trending</h3>
+                  <!-- Product 5 -->
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="images/shoe-1.jpg"
+                        alt="Air Trekking Shoes - white"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h4>Air Trekking Shoes - white</h4>
+                      <p class="category">Sports</p>
+                      <div class="price">
+                        <span class="original-price">$55.00</span>
+                        <span class="discount-price">$52.00</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Product 6 -->
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="images/shoe-2.jpg"
+                        alt="Boot With Suede Detail"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h4>Boot With Suede Detail</h4>
+                      <p class="category">boots</p>
+                      <div class="price">
+                        <span class="original-price">$30.00</span>
+                        <span class="discount-price">$20.00</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Product 7 -->
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="images/shoe-3.jpg"
+                        alt="Men's Leather Formal Wear shoes"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h4>Men's Leather Formal Wear shoes</h4>
+                      <p class="category">formal</p>
+                      <div class="price">
+                        <span class="original-price">$78.00</span>
+                        <span class="discount-price">$56.00</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Product 8 -->
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="images/sports-6.jpg"
+                        alt="Casual Men's Brown shoes"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h4>Casual Men's Brown shoes</h4>
+                      <p class="category">Casual</p>
+                      <div class="price">
+                        <span class="original-price">$55.00</span>
+                        <span class="discount-price">$50.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="top-rated">
+                  <h3>Top Rated</h3>
+                  <!-- Product 9 -->
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="images/watch-3.jpg"
+                        alt="Pocket Watch Leather Pouch"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h4>Pocket Watch Leather Pouch</h4>
+                      <p class="category">Watches</p>
+                      <div class="price">
+                        <span class="original-price">$50.00</span>
+                        <span class="discount-price">$34.00</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Product 10 -->
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="images/jewellery-3.jpg"
+                        alt="Silver Deer Heart Necklace"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h4>Silver Deer Heart Necklace</h4>
+                      <p class="category">Jewellery</p>
+                      <div class="price">
+                        <span class="original-price">$84.00</span>
+                        <span class="discount-price">$30.00</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Product 11 -->
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="images/perfume.jpg"
+                        alt="Titan 100 Ml Womens Perfume"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h4>Titan 100 Ml Womens Perfume</h4>
+                      <p class="category">Perfume</p>
+                      <div class="price">
+                        <span class="original-price">$42.00</span>
+                        <span class="discount-price">$10.00</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Product 12 -->
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img
+                        src="images/belt.jpg"
+                        alt="Men's Leather Reversible Belt"
+                      />
+                    </div>
+                    <div class="product-info">
+                      <h4>Men's Leather Reversible Belt</h4>
+                      <p class="category">Belt</p>
+                      <div class="price">
+                        <span class="original-price">$24.00</span>
+                        <span class="discount-price">$10.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deal-of-day">
+                <h3>Deal Of The Day</h3>
+                <div class="deal-card">
+                  <div class="product-image">
+                    <img src="images/shampoo-deal.jpg" alt="Shampoo, Conditioner & Facewash Pack">
+                  </div>
+                  <div class="product-info">
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <h4>SHAMPOO, CONDITIONER & FACEWASH PACKS</h4>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit amet consectetur Lorem ipsum dolor</p>
+                    <div class="price-section">
+                      <div class="price">
+                        <span class="discount-price">$150.00</span>
+                        <span class="original-price">$200.00</span>
+                      </div>
+                      <button class="add-to-cart">ADD TO CART</button>
+                    </div>
+                    <div class="stock-info">
+                      <div class="progress">
+                        <div class="progress-bar" style="width: 33%"></div>
+                      </div>
+                      <div class="stock-text">
+                        <span>ALREADY SOLD: <strong>20</strong></span>
+                        <span>AVAILABLE: <strong>40</strong></span>
+                      </div>
+                    </div>
+                    <div class="countdown">
+                      <p>HURRY UP! OFFER ENDS IN:</p>
+                      <div class="timer">
+                        <div class="time-block">
+                          <span class="number">360</span>
+                          <span class="text">Days</span>
+                        </div>
+                        <div class="time-block">
+                          <span class="number">24</span>
+                          <span class="text">Hours</span>
+                        </div>
+                        <div class="time-block">
+                          <span class="number">59</span>
+                          <span class="text">Min</span>
+                        </div>
+                        <div class="time-block">
+                          <span class="number">00</span>
+                          <span class="text">Sec</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="new-products">
+                <h3>New Products</h3>
+                <div class="products-grid">
+                  <!-- New Product 1 -->
+                  <div class="product-item">
+                    <div class="discount-tag">15%</div>
+                    <div class="product-images">
+                      <img src="images/jacket-5.jpg" alt="Mens Winter Leathers Jackets" class="img-main">
+                      <img src="images/jacket-6.jpg" alt="Mens Winter Leathers Jackets" class="img-hover">
+                    </div>
+                    <div class="category">JACKET</div>
+                    <h4>Mens Winter Leathers Jackets</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="current-price">$48.00</span>
+                      <span class="old-price">$75.00</span>
+                    </div>
+                  </div>
+
+                  <!-- New Product 2 -->
+                  <div class="product-item">
+                    <div class="sale-tag">SALE</div>
+                    <div class="product-images">
+                      <img src="images/shirt-1.jpg" alt="Pure Garment Dyed Cotton Shirt" class="img-main">
+                      <img src="images/shirt-2.jpg" alt="Pure Garment Dyed Cotton Shirt" class="img-hover">
+                    </div>
+                    <div class="category">SHIRT</div>
+                    <h4>Pure Garment Dyed Cotton Shirt</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="current-price">$45.00</span>
+                      <span class="old-price">$56.00</span>
+                    </div>
+                  </div>
+
+                  <!-- New Product 3 -->
+                  <div class="product-item">
+                    <div class="product-images">
+                      <img src="images/jacket-3.jpg" alt="MEN Yarn Fleece Full-Zip Jacket" class="img-main">
+                      <img src="images/jacket-4.jpg" alt="MEN Yarn Fleece Full-Zip Jacket" class="img-hover">
+                    </div>
+                    <div class="category">JACKET</div>
+                    <h4>MEN Yarn Fleece Full-Zip Jacket</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="current-price">$58.00</span>
+                      <span class="old-price">$65.00</span>
+                    </div>
+                  </div>
+
+                  <!-- New Product 4 -->
+                  <div class="product-item">
+                    <div class="new-tag">NEW</div>
+                    <div class="product-images">
+                      <img src="images/clothes-4.jpg" alt="Black Floral Wrap Midi Skirt" class="img-main">
+                      <img src="images/clothes-3.jpg" alt="Black Floral Wrap Midi Skirt" class="img-hover">
+                    </div>
+                    <div class="category">SKIRT</div>
+                    <h4>Black Floral Wrap Midi Skirt</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="current-price">$25.00</span>
+                      <span class="old-price">$35.00</span>
+                    </div>
+                  </div>
+
+                  <!-- Product 1 -->
+                  <div class="product-item">
+                    <div class="product-images">
+                      <img src="images/jacket-1.jpg" alt="Mens Winter Leathers Jackets" class="img-main">
+                      <img src="images/jacket-2.jpg" alt="Mens Winter Leathers Jackets" class="img-hover">
+                    </div>
+                    <div class="category">JACKET</div>
+                    <h4>Mens Winter Leathers Jackets</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="current-price">$32.00</span>
+                      <span class="old-price">$45.00</span>
+                    </div>
+                  </div>
+
+                  <!-- Product 2 -->
+                  <div class="product-item">
+                    <div class="sale-tag">SALE</div>
+                    <div class="product-images">
+                      <img src="images/shoe-1.jpg" alt="Trekking & Running Shoes - Black" class="img-main">
+                      <img src="images/shoe-1_1.jpg" alt="Trekking & Running Shoes - Black" class="img-hover">
+                    </div>
+                    <div class="category">SPORTS</div>
+                    <h4>Trekking & Running Shoes - Black</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="current-price">$58.00</span>
+                      <span class="old-price">$64.00</span>
+                    </div>
+                  </div>
+
+                  <!-- Product 3 -->
+                  <div class="product-item">
+                    <div class="product-images">
+                      <img src="images/shoe-2.jpg" alt="Men's Leather Formal Wear Shoes" class="img-main">
+                      <img src="images/shoe-2_1.jpg" alt="Men's Leather Formal Wear Shoes" class="img-hover">
+                    </div>
+                    <div class="category">FORMAL</div>
+                    <h4>Men's Leather Formal Wear Shoes</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="current-price">$50.00</span>
+                      <span class="old-price">$65.00</span>
+                    </div>
+                  </div>
+
+                  <!-- Product 4 -->
+                  <div class="product-item">
+                    <div class="sale-tag">SALE</div>
+                    <div class="product-images">
+                      <img src="images/shorts-1.jpg" alt="Better Basics French Terry Sweatshorts" class="img-main">
+                      <img src="images/shorts-2.jpg" alt="Better Basics French Terry Sweatshorts" class="img-hover">
+                    </div>
+                    <div class="category">SHORTS</div>
+                    <h4>Better Basics French Terry Sweatshorts</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="current-price">$78.00</span>
+                      <span class="old-price">$85.00</span>
+                    </div>
+                  </div>
+
+                  <!-- Product 5 -->
+                  <div class="product-item">
+                    <div class="product-images">
+                      <img src="images/shirt-1.jpg" alt="Pure Garment Dyed Cotton Shirt" class="img-main">
+                      <img src="images/shirt-2.jpg" alt="Pure Garment Dyed Cotton Shirt" class="img-hover">
+                    </div>
+                    <div class="category">SHIRT</div>
+                    <h4>Pure Garment Dyed Cotton Shirt</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="current-price">$45.00</span>
+                      <span class="old-price">$56.00</span>
+                    </div>
+                  </div>
+
+                  <!-- Product 6 -->
+                  <div class="product-item">
+                    <div class="sale-tag">SALE</div>
+                    <div class="product-images">
+                      <img src="images/watch-1.jpg" alt="Pocket Watch Leather Pouch" class="img-main">
+                      <img src="images/watch-2.jpg" alt="Pocket Watch Leather Pouch" class="img-hover">
+                    </div>
+                    <div class="category">WATCHES</div>
+                    <h4>Pocket Watch Leather Pouch</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="current-price">$150.00</span>
+                      <span class="old-price">$170.00</span>
+                    </div>
+                  </div>
+
+                  <!-- Product 7 -->
+                  <div class="product-item">
+                    <div class="product-images">
+                      <img src="images/watch-3.jpg" alt="Smart Watch Vital Plus" class="img-main">
+                      <img src="images/watch-4.jpg" alt="Smart Watch Vital Plus" class="img-hover">
+                    </div>
+                    <div class="category">WATCHES</div>
+                    <h4>Smart Watch Vital Plus</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="current-price">$100.00</span>
+                      <span class="old-price">$120.00</span>
+                    </div>
+                  </div>
+
+                  <!-- Product 8 -->
+                  <div class="product-item">
+                    <div class="sale-tag">SALE</div>
+                    <div class="product-images">
+                      <img src="images/party-wear-1.jpg" alt="Party Wear Shoes" class="img-main">
+                      <img src="images/party-wear-2.jpg" alt="Party Wear Shoes" class="img-hover">
+                    </div>
+                    <div class="category">PARTY WEAR</div>
+                    <h4>Women's Party Wear Shoes</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">
+                      <span class="current-price">$25.00</span>
+                      <span class="old-price">$30.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="content">
+          <!-- Popular Categories Section -->
+          <div class="footer-section">
+            <h3>POPULAR CATEGORIES</h3>
+            <ul>
+              <li><a href="#">Fashion</a></li>
+              <li><a href="#">Electronic</a></li>
+              <li><a href="#">Cosmetic</a></li>
+              <li><a href="#">Health</a></li>
+              <li><a href="#">Watches</a></li>
+            </ul>
+          </div>
+
+          <!-- Products Section -->
+          <div class="footer-section">
+            <h3>PRODUCTS</h3>
+            <ul>
+              <li><a href="#">Prices Drop</a></li>
+              <li><a href="#">New Products</a></li>
+              <li><a href="#">Best Sales</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+
+          <!-- Our Company Section -->
+          <div class="footer-section">
+            <h3>OUR COMPANY</h3>
+            <ul>
+              <li><a href="#">Delivery</a></li>
+              <li><a href="#">Legal Notice</a></li>
+              <li><a href="#">Terms And Conditions</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Secure Payment</a></li>
+            </ul>
+          </div>
+
+          <!-- Services Section -->
+          <div class="footer-section">
+            <h3>SERVICES</h3>
+            <ul>
+              <li><a href="#">Prices Drop</a></li>
+              <li><a href="#">New Products</a></li>
+              <li><a href="#">Best Sales</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Section -->
+          <div class="footer-section">
+            <h3>CONTACT</h3>
+            <ul>
+              <li>
+                <i class="fas fa-location-dot"></i>
+                419 State 414 Rte Beaver Dams, New York(NY), 14812, USA
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                (607) 936-8058
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                Example@Gmail.Com
+              </li>
+            </ul>
+          </div>
+          <!-- Follow Us Section -->
+          <div class="footer-section follow-us">
+            <h3>Follow Us</h3>
+            <ul class="social-media">
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+        <div class="copyright">
+          <p>Copyright &copy; 2025 All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Main js file -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

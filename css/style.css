@@ -9,6 +9,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   font-family: system-ui, "Helvetica Neue", sans-serif;
@@ -16,6 +17,7 @@ body {
 ul {
   padding: 0;
   list-style: none;
+ 
 }
 a {
   text-decoration: none;
@@ -284,36 +286,63 @@ header ul.media {
     display: none;
   }
   header ul.media {
-    background-color: #fff;
-    margin: 5px 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     position: fixed;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50%;
-    margin: 0 auto;
-    gap: 40px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: 0px 0px 13px 0px #ddd;
-    z-index: 1000;
-  }
-  header ul.media li a {
-    display: inline-block;
+    left: 0;
+    right: 0;
+    background: #fff;
     padding: 10px;
-    cursor: pointer;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    margin: 0;
+    width: 100%;
+    transform: none;
   }
+
+  header ul.media li {
+    margin: 0;
+    padding: 0;
+  }
+
+  header ul.media li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #333;
+    padding: 5px;
+  }
+
   header ul.media li a i {
-    font-size: 22px;
-    color: #000;
+    font-size: 20px;
   }
+
   header ul.media li a .counter {
-    top: 2px;
-    right: -3px;
-    background-color: #f8647e;
+    top: -5px;
+    right: -5px;
+    background-color: var(--main-color);
   }
+
+  /* Add padding to main content to prevent overlap with fixed menu */
+  main {
+    padding-bottom: 70px;
+  }
+
+  /* Fix for empty space on the left */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   main section.home .content {
     margin: 0;
     padding: 10px;
@@ -342,7 +371,7 @@ main section.home .container .left  {
 }
 @media (max-width: 768px) {
   header ul.media {
-    width: 90%;
+    width: 100%;
   }
   main section.home .content .slider-info p.offer {
     font-size: 22px;
@@ -1518,5 +1547,24 @@ footer .follow-us .social-media li a:hover {
 @media (max-width: 992px) {
   footer .follow-us {
     display: block;
+  }
+}
+
+/* Additional fixes for smaller screens */
+@media (max-width: 576px) {
+  header ul.media {
+    padding: 8px;
+  }
+
+  header ul.media li a {
+    font-size: 10px;
+  }
+
+  header ul.media li a i {
+    font-size: 18px;
+  }
+
+  main {
+    padding-bottom: 60px;
   }
 }
